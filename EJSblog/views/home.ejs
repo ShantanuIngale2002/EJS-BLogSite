@@ -1,0 +1,26 @@
+<%- include("Partials/header") %>
+
+
+<h1>HomePage is here</h1>
+<p> <%= home1st %> </p>
+
+<br>
+
+<!-- This forEach js method works similar to that of for loop -->
+<% sharePosts.forEach(function(element){ %>
+    <!-- <a href="https://www.google.com" target="_blank"><%= element.title %></a> -->
+    <h4> <%= element.title %> </h4>
+    <!-- <h1>
+        <%= element.title %>
+    </h1> -->
+    <p>
+        <%= element.content.substring(0,96)+" ..." %>
+        <a href="/posts/<%=element.title%>">read more</a>
+        <!-- The above done task to route is very important -->
+    </p>
+    
+<% }) %>
+
+
+
+<%- include("Partials/footer") %>
